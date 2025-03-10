@@ -2,10 +2,12 @@
 import { WebSocketServer } from 'ws';
 import { GameManager } from './GameManager';
 
+// Print server running on the console
+
 const wss = new WebSocketServer({ port: 8080 });
-
-
 const gameManager = new GameManager();
+console.log("Server running on port 8080");
+console.log("Game manager is ready");
 
 wss.on('connection', function connection(ws) {
 // on - incoming connection, send - outgoing connection
